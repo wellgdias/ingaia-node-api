@@ -51,7 +51,7 @@ const fakeResponse: WeatherApiResponse = {
 describe('WeatherAdapter', () => {
   const mockedRequest = new HTTP.Request() as jest.Mocked<HTTP.Request>
 
-  test('Should return a temp from the WeatherAdapter', async () => {
+  test('Should return a temp on call the WeatherAdapter', async () => {
     const city = 'any_city'
 
     // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
