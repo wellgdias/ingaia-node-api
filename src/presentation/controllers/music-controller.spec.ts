@@ -1,7 +1,7 @@
 import { MusicController } from './music-controller'
 import { HttpRequest } from '../protocols/http'
 import { Weather } from '../../infra/clients/protocols/weather'
-import { ok, serverError } from '../helpers/http-helper'
+import { ok, serverError, notFound } from '../helpers/http-helper'
 import { Music } from '../../infra/clients/protocols/music'
 
 const makeFakeRequest = (): HttpRequest => ({
@@ -72,6 +72,26 @@ describe('Music Controller', () => {
       )
     const httpResponse = await sut.handle(makeFakeRequest())
     expect(httpResponse).toEqual(serverError(new Error()))
+  })
+
+  test('Should return 404 on calls Weather with incorrect city ', async () => {
+    const { sut, weatherStub } = makeSut()
+    jest.spyOn(weatherStub, 'getTemp').mockRejectedValue({
+      response: {
+        status: 404,
+        data: {
+          cod: '404',
+          message: 'city not found'
+        }
+      }
+    })
+    const httpResponse = await sut.handle(makeFakeRequest())
+    expect(httpResponse).toEqual(
+      notFound({
+        cod: '404',
+        message: 'city not found'
+      })
+    )
   })
 
   test('should call Music with temp ', async () => {
