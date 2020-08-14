@@ -1,8 +1,6 @@
 # Desafio inGaia - Back-end Developer
 API REST desenvolvida em Node utilizando Typescript e MongoDB para o desafio de back-end da inGaia, o serviço está disponível online no Heroku e pode ser acessado através do endereço https://ingaia-node-api.herokuapp.com/
 
-## Arquitetura da API
-
 ## Funcionalidades
  - Listar uma playlist de musicas informando o nome de uma cidade
  - Listar as estatísticas de cidades que foram consultadas pela API
@@ -74,5 +72,13 @@ Para executar os testes unitários e os de integração da API e gerar a cobertu
 npm run test:ci
 ```
 
+## Arquitetura da API
+Music endpoint
+
+![InGaia-Music](https://user-images.githubusercontent.com/47192417/90273841-fac3f280-de35-11ea-9ab6-8b5e07d6ad5c.png)
+
+Stats endpoint
+
+![InGaia-Stats](https://user-images.githubusercontent.com/47192417/90273866-057e8780-de36-11ea-8a2f-04493023ab1d.png)
 
 
