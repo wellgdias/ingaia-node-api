@@ -16,13 +16,13 @@ describe('MusicAdapter', () => {
   })
 
   test('Should return a playlist rock on call the MusicAdapter', async () => {
-    const temp = 25
+    const temp = 23
     const sut = makeSut()
     const response = await sut.getPlaylist(temp)
     expect(response).toEqual(rock)
   })
 
-  test('Should return a playlist rock on call the MusicAdapter', async () => {
+  test('Should return a playlist classic on call the MusicAdapter', async () => {
     const temp = 9
     const sut = makeSut()
     const response = await sut.getPlaylist(temp)

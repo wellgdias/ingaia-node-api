@@ -1,5 +1,6 @@
 import { StatsRepository } from '../../../../data/protocols/stats-repository'
 import { MongoHelper } from '../helpers/mongo-helper'
+import { StatsModel } from '../../../../data/protocols/stats'
 
 export class StatsMongoRepository implements StatsRepository {
   async saveStats(city: string): Promise<void> {
@@ -10,5 +11,10 @@ export class StatsMongoRepository implements StatsRepository {
         date: new Date()
       }
     })
+  }
+
+  async getStats(): Promise<StatsModel[]> {
+    const statsCollection = await MongoHelper.getCollection('stats')
+    return await statsCollection.find<StatsModel>().toArray()
   }
 }

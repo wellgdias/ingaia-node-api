@@ -1,8 +1,8 @@
 import { MusicController } from './music-controller'
-import { HttpRequest } from '../protocols/http'
-import { Weather } from '../../infra/clients/protocols/weather'
-import { ok, serverError, notFound } from '../helpers/http-helper'
-import { Music } from '../../infra/clients/protocols/music'
+import { HttpRequest } from '../../protocols/http'
+import { Weather } from '../../../infra/clients/protocols/weather'
+import { ok, serverError, notFound } from '../../helpers/http-helper'
+import { Music } from '../../../infra/clients/protocols/music'
 
 const makeFakeRequest = (): HttpRequest => ({
   params: {

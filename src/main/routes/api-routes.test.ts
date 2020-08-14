@@ -15,14 +15,20 @@ describe('Login Routes', () => {
   })
 
   beforeEach(async () => {
-    accountcollection = await MongoHelper.getCollection('accounts')
+    accountcollection = await MongoHelper.getCollection('stats')
     await accountcollection.deleteMany({})
   })
 
   describe('GET /music/:city', () => {
-    test('Should return 200 on music', async () => {
+    test('Should return 200 on call music', async () => {
       const city = 'Itu'
       await request(app).get(`/api/v1/music/${city}`).expect(200)
+    })
+  })
+
+  describe('GET /stats', () => {
+    test('Should return 200 on call stats', async () => {
+      await request(app).get('/api/v1/stats').expect(200)
     })
   })
 })
