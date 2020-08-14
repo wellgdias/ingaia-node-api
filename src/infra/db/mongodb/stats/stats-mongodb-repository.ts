@@ -1,6 +1,6 @@
 import { StatsRepository } from '../protocols/stats-repository'
 import { MongoHelper } from '../helpers/mongo-helper'
-import { StatsModel } from '../../../../data/protocols/stats'
+import { StatsModel } from '../../../../infra/db/mongodb/protocols/stats'
 
 export class StatsMongoRepository implements StatsRepository {
   async saveStats(city: string): Promise<void> {
