@@ -73,11 +73,11 @@ npm run test:ci
 ```
 
 ## Arquitetura da API
-Music endpoint
+#### Music endpoint
 
 ![InGaia-Music](https://user-images.githubusercontent.com/47192417/90273841-fac3f280-de35-11ea-9ab6-8b5e07d6ad5c.png)
 
-Stats endpoint
+#### Stats endpoint
 
 ![InGaia-Stats](https://user-images.githubusercontent.com/47192417/90273866-057e8780-de36-11ea-8a2f-04493023ab1d.png)
 
