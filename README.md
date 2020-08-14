@@ -1,5 +1,5 @@
 # Desafio inGaia - Back-end Developer
-API REST desenvolvida em Node utilizando Typescript e MongoDB para o desafio de back-end da inGaia, o serviço está disponível online no Heroku e pode ser acessado através do endereço: https://ingaia-node-api.herokuapp.com/
+API REST desenvolvida em Node utilizando Typescript e MongoDB para o desafio de back-end da inGaia, o serviço está disponível online no Heroku e pode ser acessado através do endereço https://ingaia-node-api.herokuapp.com/
 
 ## Arquitetura da API
 
@@ -43,7 +43,22 @@ informar o nome da cidade como parâmetro para requisição
 GET /api/v1/stats
 ```
 
-## Testes da API
+## Executar a API no ambiente local
+Para executar a API no ambiente local é necessário possuir o NodeJS e o MongoDB instalado na maquina.
+
+### Instalação das dependências
+Primeiro deve ser executado a instalação das dependências
+```
+npm install
+``` 
+
+### Execução da API
+Para executar a API localmente deverá ser executado o seguinte comando
+```
+npm run dev
+``` 
+
+### Testes da API
 Para executar os testes unitários da API
 ```
 npm run test:unit
