@@ -1,6 +1,6 @@
 import { Controller } from '../../protocols/controller'
 import { HttpRequest, HttpResponse } from '../../protocols/http'
-import { StatsRepository } from '../../../data/protocols/stats-repository'
+import { StatsRepository } from '../../../infra/db/mongodb/protocols/stats-repository'
 import { ok, serverError } from '../../helpers/http-helper'
 
 export class StatsController implements Controller {

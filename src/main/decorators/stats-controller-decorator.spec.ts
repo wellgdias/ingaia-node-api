@@ -1,9 +1,9 @@
 import { Controller } from '../../presentation/protocols/controller'
 import { StatsControllerDecorator } from './stats-controller-decorator'
 import { HttpRequest, HttpResponse } from '../../presentation/protocols/http'
-import { StatsModel } from '../../data/protocols/stats'
+import { StatsModel } from '../../infra/db/mongodb/protocols/stats'
 import { ok } from '../../presentation/helpers/http-helper'
-import { StatsRepository } from '../../data/protocols/stats-repository'
+import { StatsRepository } from '../../infra/db/mongodb/protocols/stats-repository'
 
 const date = new Date()
 const makeFakeRequest = (): HttpRequest => ({
@@ -68,5 +68,4 @@ describe('StatsController Decorator', () => {
     const response = await sut.handle(makeFakeRequest())
     expect(response).toEqual(ok(makeFakeResponse()))
   })
- 
 })

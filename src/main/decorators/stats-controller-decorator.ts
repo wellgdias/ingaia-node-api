@@ -1,6 +1,6 @@
 import { Controller } from '../../presentation/protocols/controller'
 import { HttpRequest, HttpResponse } from '../../presentation/protocols/http'
-import { StatsRepository } from '../../data/protocols/stats-repository'
+import { StatsRepository } from '../../infra/db/mongodb/protocols/stats-repository'
 
 export class StatsControllerDecorator implements Controller {
   constructor(

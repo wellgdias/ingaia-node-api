@@ -1,4 +1,4 @@
-import { StatsRepository } from '../../../../data/protocols/stats-repository'
+import { StatsRepository } from '../protocols/stats-repository'
 import { MongoHelper } from '../helpers/mongo-helper'
 import { StatsModel } from '../../../../data/protocols/stats'
 

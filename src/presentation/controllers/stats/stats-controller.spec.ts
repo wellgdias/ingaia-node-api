@@ -1,6 +1,6 @@
 import { StatsController } from './stats-controller'
-import { StatsRepository } from '../../../data/protocols/stats-repository'
-import { StatsModel } from '../../../data/protocols/stats'
+import { StatsRepository } from '../../../infra/db/mongodb/protocols/stats-repository'
+import { StatsModel } from '../../../infra/db/mongodb/protocols/stats'
 import { HttpRequest } from '../../protocols/http'
 import { ok, serverError } from '../../helpers/http-helper'
 
