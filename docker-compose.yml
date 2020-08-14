@@ -1,0 +1,25 @@
+version: '3'
+services:
+  mongo:
+    container_name: mongodb-ingaia-api
+    image: mongo:3
+    restart: always
+    volumes:
+      - mongodata:/data/db
+    ports:
+      - '27017:27017'
+  api:
+    container_name: container-ingaia-api
+    image: node:12
+    working_dir: /usr/src/ingaia-node-api
+    restart: always
+    command: bash -c "npm install --only=prod && npm start"
+    volumes:
+      - ./dist/:/usr/src/ingaia-node-api/dist
+      - ./package.json:/usr/src/ingaia-node-api/package.json
+    ports:
+      - '3030:3030'
+    links:
+      - mongo
+volumes:
+  mongodata:

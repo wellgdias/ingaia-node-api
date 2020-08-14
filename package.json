@@ -1,6 +1,6 @@
 {
   "name": "ingaia-node-api",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "description": "NodeJS Rest API using Typescript",
   "scripts": {
     "start": "node dist/main/server.js",
@@ -9,7 +9,9 @@
     "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
     "test:unit": "npm test -- --watch -c jest-unit-config.js",
     "test:integration": "npm test -- --watch -c jest-integration-config.js",
-    "test:ci": "npm test -- --coverage"
+    "test:ci": "npm test -- --coverage",
+    "up": "npm run build && docker-compose up",
+    "down": "docker-compose down"
   },
   "keywords": [],
   "author": "Wellington Dias",
