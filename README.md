@@ -79,6 +79,7 @@ npm run test:ci
 
 #### Stats endpoint
 
-![InGaia-Stats](https://user-images.githubusercontent.com/47192417/90273866-057e8780-de36-11ea-8a2f-04493023ab1d.png)
+![InGaia-Stats](https://user-images.githubusercontent.com/47192417/90276818-eafadd00-de3a-11ea-9342-9c9376d35447.png)
+
 
 
