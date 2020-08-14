@@ -3,7 +3,8 @@
   "version": "1.1.0",
   "description": "NodeJS Rest API using Typescript",
   "scripts": {
-    "start": "sucrase-node src/main/server.ts",
+    "start": "node dist/main/server.js",
+    "dev": "sucrase-node src/main/server.ts",
     "build": "rimraf dist && tsc",
     "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
     "test:unit": "npm test -- --watch -c jest-unit-config.js",
