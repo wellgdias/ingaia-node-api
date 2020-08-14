@@ -24,6 +24,8 @@ SPOTIFY_CLIENTSECRET=''
 ````
 
 ### Criação do container Docker
+> Para executar a API no ambiente local é necessário possuir o NodeJS instalado na máquina.
+
 Para criar o container Docker e executar API, é necessário a geração da build, o seguinte comando pode ser executado:
  ```
 npm run up
@@ -44,7 +46,7 @@ GET /api/v1/stats
 ```
 
 ## Executar a API no ambiente local
-Para executar a API no ambiente local é necessário possuir o NodeJS e o MongoDB instalado na maquina.
+Para executar a API no ambiente local é necessário possuir MongoDB instalado na máquina.
 
 ### Instalação das dependências
 Primeiro deve ser executado a instalação das dependências
