@@ -17,6 +17,8 @@ services:
     volumes:
       - ./dist/:/usr/src/ingaia-node-api/dist
       - ./package.json:/usr/src/ingaia-node-api/package.json
+      - ./.env:/usr/src/ingaia-node-api/package.json
+
     ports:
       - '3030:3030'
     links:
